@@ -29,12 +29,12 @@ function ProdukInfo(props) {
       cbdhcvdghvchd sdvsgdvhsgv sdgvsghdv hjvhsvdc hvdhgsvds hvscsvc hsvcgsvc
       vdsvdghsdvx sdhsvdghs hjvscsvc shcvsvcghsv sghvcgsvc ghsvcgsvc ghsvchgsv ghvschsv
       </p>
-      <a href="#" onClick={TambahProduk}>Add Produk</a>
+      <a href="#" onClick={(e) => TambahProduk(name, e)}>Add Produk</a>
     </div>);
 }
 
-function TambahProduk() {
-  return alert("Success");
+function TambahProduk(e) {
+  return alert("Success membeli " + e);
 }
 
 export default App;
