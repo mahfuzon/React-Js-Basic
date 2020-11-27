@@ -20,6 +20,8 @@ function Produkfoto() {
 
 function ProdukInfo(props) {
   const { title, name } = props;
+  const ListBenefit = ['bagus', 'ringan', 'mantap', 'cerah', 'hahaha'];
+  const benefit = ListBenefit.map((e) => <li>{e}</li>);
   return (
     <div className="Deskripsi">
       <p className="Cate">{title}</p>
@@ -30,6 +32,7 @@ function ProdukInfo(props) {
       cbdhcvdghvchd sdvsgdvhsgv sdgvsghdv hjvhsvdc hvdhgsvds hvscsvc hsvcgsvc
       vdsvdghsdvx sdhsvdghs hjvscsvc shcvsvcghsv sghvcgsvc ghsvcgsvc ghsvchgsv ghvschsv
       </p>
+      <ul>{benefit}</ul>
       <a href="#" onClick={(e) => TambahProduk(name, e)}>Add Produk</a>
     </div>);
 }
