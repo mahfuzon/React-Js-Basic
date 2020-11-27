@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div class="ParentBox">
+    <div className="ParentBox">
       <Produkfoto></Produkfoto>
       <ProdukInfo name="Adidas Hitam Sneaker yahaha" title="Sneaker"></ProdukInfo>
     </div>
@@ -12,24 +12,29 @@ function App() {
 
 function Produkfoto() {
   return (
-    <div class="Foto">
+    <div className="Foto">
       <center><img src="download.jpg" /></center>
     </div>
   );
 }
 
 function ProdukInfo(props) {
-  const {title,name} = props;
+  const { title, name } = props;
   return (
-    <div class="Deskripsi">
-      <p class="Cate">{title}</p>
-      <h1 class="Title">{name}</h1>
-      <p class="Price">IDR 73.000</p>
-      <p class="Info">ashdgshdv hdvhgsvdhsgvh havdhgsdvhs hvdghsdvsv hvdhgsvdhs vdshvxs
+    <div className="Deskripsi">
+      <p className="Cate">{title}</p>
+      <h1 className="Title">{name}</h1>
+      <p className="Price">IDR 73.000</p>
+      <p className="Info">ashdgshdv hdvhgsvdhsgvh havdhgsdvhs hvdghsdvsv hvdhgsvdhs vdshvxs
       cbdhcvdghvchd sdvsgdvhsgv sdgvsghdv hjvhsvdc hvdhgsvds hvscsvc hsvcgsvc
       vdsvdghsdvx sdhsvdghs hjvscsvc shcvsvcghsv sghvcgsvc ghsvcgsvc ghsvchgsv ghvschsv
-    </p>
+      </p>
+      <a href="#" onClick={TambahProduk}>Add Produk</a>
     </div>);
+}
+
+function TambahProduk() {
+  return alert("Success");
 }
 
 export default App;
