@@ -6,6 +6,16 @@ function App() {
     <div className="ParentBox">
       <Produkfoto></Produkfoto>
       <ProdukInfo name="Adidas Hitam Sneaker yahaha" title="Sneaker"></ProdukInfo>
+      <div className="ReviewBox">
+        <h2>Review</h2>
+        <div className="Item">
+          <img src="https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+          <div className="User">
+            <h3>Christina Aguilera</h3>
+            <p>Harganya Murah tapi bukan kaleng-kaleng nih. keren....</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -56,6 +66,27 @@ function CekDiskon(props) {
       <p>Belum ada discount</p>
     );
   }
+}
+
+function ReviewItem{
+  // mempersiapkan data dummy
+  const user = [
+    {
+      "id": 1,
+      "name": "Mauriska",
+      "review": "Harganya murah tapi bukan kaleng-kaleng nih"
+    },
+    {
+      "id": 2,
+      "name": "Nara",
+      "review": "Harganya murah tapi bukan kaleng-kaleng nih"
+    },
+    {
+      "id": 3,
+      "name": "Sandi",
+      "review": "Harganya murah tapi bukan kaleng-kaleng nih"
+    },
+  ];
 }
 
 export default App;
