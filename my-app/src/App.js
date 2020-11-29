@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -6,16 +5,7 @@ function App() {
     <div className="ParentBox">
       <Produkfoto></Produkfoto>
       <ProdukInfo name="Adidas Hitam Sneaker yahaha" title="Sneaker"></ProdukInfo>
-      <div className="ReviewBox">
-        <h2>Review</h2>
-        <div className="Item">
-          <img src="https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-          <div className="User">
-            <h3>Christina Aguilera</h3>
-            <p>Harganya Murah tapi bukan kaleng-kaleng nih. keren....</p>
-          </div>
-        </div>
-      </div>
+      <ReviewItem></ReviewItem>
     </div>
   );
 }
@@ -68,9 +58,9 @@ function CekDiskon(props) {
   }
 }
 
-function ReviewItem{
+function ReviewItem() {
   // mempersiapkan data dummy
-  const user = [
+  const users = [
     {
       "id": 1,
       "name": "Mauriska",
@@ -87,6 +77,21 @@ function ReviewItem{
       "review": "Harganya murah tapi bukan kaleng-kaleng nih"
     },
   ];
+
+  const review = users.map((e) =>
+    <div className="Item">
+      <img src="https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+      <div className="User">
+        <h3>{e.name}</h3>
+        <p>{e.review}</p>
+      </div>
+    </div>);
+
+  return (
+    <div className="ReviewBox">
+      <h2>Review</h2>{review}
+    </div>
+  );
 }
 
 export default App;

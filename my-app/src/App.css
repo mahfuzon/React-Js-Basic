@@ -10,10 +10,11 @@
   width: 50%;
   height: 700px;
   background: #e3e9ee;
+  margin-left: 50px;
 }
 
 .Foto img {
-  width: 101%;
+  width: 70%;
   height: 100%;
   margin: auto;
   margin-top: 100px;
@@ -69,6 +70,7 @@
   width: 100%;
   overflow: hidden;
   padding-bottom: 100px;
+  margin-left: 30px;
 }
 
 .ReviewBox h2 {
